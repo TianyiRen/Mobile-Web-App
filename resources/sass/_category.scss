@@ -1,0 +1,72 @@
+.category .img {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.category-grid .x-list-item {
+	display: inline-block;
+	width: 50%;
+	border: none !important;
+	@include perspective(300px);
+
+	.x-innerhtml{
+	      padding:0px;
+	}
+	body.x-ios &.x-item-pressed {
+		.category {
+			@include transform(translateZ(20px));
+		}
+	}
+	.back:before{
+	    font-family:'Fallfor-Icons';
+	    content: "\f104";
+	    font-size: 18px;
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+	    padding-right: 5px;
+	}
+	.category {
+		@include st-box;
+		@include st-box-orient(vertical);
+		@include st-box-align(center);
+		@include transition-duration(.3s);
+
+		$width: (320/2) - ($list-item-padding *2);
+		$height: $width * (266/180);
+
+		.title {
+			white-space: nowrap;
+			width: $width;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 11px;
+			font-weight:bold;
+			color:white;
+			text-align: center;
+			margin-left:4px;
+			padding-bottom: 5px;
+			background-color:gray;
+			padding-left:5px;
+			padding-right:5px;
+			opacity:0.6;
+		}
+
+		.img {;
+			background-color: black;
+			background-position: 50%;
+			background-size: cover;
+			@include box-shadow(10px 10px 38px -8px black);
+		}
+	}
+}
+
+.icon-category-grid .x-list-item {
+	display: inline-block;
+	width: 33%;
+	border: none !important;
+	@include perspective(300px);
+	.x-innerhtml{
+	      padding:0px;
+	}
+}
+

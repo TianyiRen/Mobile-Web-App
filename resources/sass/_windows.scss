@@ -1,0 +1,55 @@
+@mixin query-lumia-920 {
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1280px) {
+		@content;
+	}
+}
+
+@mixin query-lumia-920-landscape {
+	@media only screen and (orientation: landscape) and (min-device-width : 768px) and (max-device-width : 1280px) {
+		@content;
+	}
+}
+
+x-ios {
+    x-safari {
+        pading-top:0px;
+    }	
+}
+
+.x-ie {
+
+	.x-toolbar {
+		background-color: #f7f7f7;
+		.x-button .x-button-icon {
+			height: 1.3em;
+		}
+	}
+	.grid .x-list-item {
+		width: 50%;
+
+	}
+
+	.productdetails {
+		.title {
+				font-size: 1.5em;
+		}
+		.img {
+
+		}
+		ul.cast {
+			li {
+
+			}
+		}
+	}
+
+	.welcomeOverlay.x-panel {
+		background-color: rgba(0,0,0,.5);
+
+		.x-innerhtml {
+			.message {
+				font-size: 1em;
+			}
+		}
+	}
+}

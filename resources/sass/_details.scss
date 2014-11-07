@@ -1,0 +1,142 @@
+.back:before{
+	    font-family:'Fallfor-Icons';
+	    content: "\f104";
+	    font-size: 18px;
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+	}
+.productdetails {
+	z-index: 5;
+	.x-button {
+		border: 0;
+		border-radius: 0;
+		background-color: rgb(246, 255, 148);
+
+		&.x-button-pressing {
+			background-color: #F8E766;
+			background-image: none;
+		}
+
+		.x-button-label {
+			font-weight: 100;
+		}
+	}
+
+	.bythelook {
+		text-align: center;
+		font-weight: 95;
+		font-size: 1em;
+		padding: 8px;
+		line-height: 1em;
+		max-height: 200px;
+		overflow: hidden;
+
+	}
+	.imagescroll {
+		width: 100%;
+		height: 250px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		white-space: nowrap;
+		background-position: 50%;
+		@include box-shadow(inset 0px 0px 14px 0px rgba(0, 0, 0, 0.5));
+	}
+	.title {
+		text-align: left;
+		font-weight: 25;
+		font-size: 20px;
+		padding: 8px;
+		line-height: 1em;
+		max-height: 300px;
+		overflow: hidden;
+	}
+	.desc {
+		text-align: left;
+		font-weight: 25;
+		font-size: 15px;
+		padding: 8px;
+		overflow: hidden;
+		text-wrap: normal;
+	}
+	.moredetail-label {
+		font-weight: 50;
+		font-size: 18px;
+	}
+	.moredetail-text {
+		font-weight: 70;
+		font-size: 14px;
+	}	
+	.price {
+		text-align: left;
+		font-weight: 50;
+		font-size: 18px;
+		padding: 8px;
+		line-height: 1em;
+		max-height: 300px;
+		overflow: hidden;
+	}
+	.img {
+		width: 110px;
+		height: 160px;
+		overflow-x: scroll;
+		background-position: 100%;
+		border: 1px solid #D5D5D5;
+	}
+	.selectField {
+		font-weight: 25;
+		font-size: 15px;
+	}
+	.selectField-input {
+	    font-weight: 25;
+		font-size: 15px;
+		font-align: right;
+	}
+	.info {
+		@include st-box;
+		@include st-box-orient(horizontal);
+		font-size: .8em;
+		font-weight: 400;
+
+		.rating, .vbox {
+			padding: 10px;
+		}
+
+		.vbox {
+			text-align: right;
+		}
+
+		.spacer {
+			@include st-box-flex(1);
+		}
+	}
+
+	ul.cast {
+		padding: 3px;
+		background-color: #d3d3d3;
+		@include st-box;
+		@include st-box-orient(horizontal);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		li {
+			font-size: .4em;
+			font-weight: 300;
+
+			&:before {
+				content: ", ";
+			}
+
+			&:first-child:before {
+				content: ""
+			}
+		}
+	}
+
+	.content .x-innerhtml {
+		text-align: justify;
+		padding: 10px;
+		font-weight: 300;
+		font-size: .8em;
+	}
+}

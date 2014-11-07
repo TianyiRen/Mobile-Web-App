@@ -1,0 +1,321 @@
+
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+
+$base-color: white;
+$base-gradient: flat;
+$toolbar-base-color: white;
+$tabs-light: rgb(180, 48, 39);
+$toolbar-base-color: #f7f7f7;
+$page-bg-color: #f7f7f7;
+
+$font-family: 'Helvetica Neue',Helvetica,Arial,Geneva,sans-serif;
+
+
+//Import Sencha SASS
+@import "sencha";
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+@include icon("bank");
+
+
+@include icon-font('Fallfor-Icons', inline-font-files(
+    'myicons/icomoon.woff', woff,
+    'myicons/icomoon.ttf', truetype,
+    'myicons/icomoon.svg', svg));
+
+@include icon("fallfor-heart", "\2665", "Fallfor-Icons");
+@include icon("fallfor-heart2", "\f004", "Fallfor-Icons");
+@include icon("fallfor-heart-o", "\f08a", "Fallfor-Icons");
+@include icon("fallfor-home", "\f08d", "Fallfor-Icons");
+@include icon("fallfor-search", "\f02e", "Fallfor-Icons");
+@include icon("fallfor-tools", "\f031", "Fallfor-Icons");
+@include icon("fallfor-trashcan", "\f0d0", "Fallfor-Icons");
+@include icon("fallfor-cart", "\e600", "Fallfor-Icons");
+@include icon("fallfor-envelope-o", "\f003", "Fallfor-Icons");
+@include icon("fallfor-star", "\f005", "Fallfor-Icons");
+@include icon("fallfor-star-o", "\f006", "Fallfor-Icons");
+
+@include icon("fallfor-user", "\f007", "Fallfor-Icons");
+@include icon("fallfor-th-list", "\f00b", "Fallfor-Icons");
+@include icon("fallfor-check", "\f00c", "Fallfor-Icons");
+@include icon("fallfor-gear", "\f013", "Fallfor-Icons");
+@include icon("fallfor-clock-o", "\f017", "Fallfor-Icons");
+@include icon("fallfor-lock", "\f023", "Fallfor-Icons");
+@include icon("fallfor-unlock-alt", "\f13e", "Fallfor-Icons");
+@include icon("fallfor-tag", "\f02b", "Fallfor-Icons");
+@include icon("fallfor-tags", "\f02c", "Fallfor-Icons");
+@include icon("fallfor-pencil", "\f040", "Fallfor-Icons");
+@include icon("fallfor-chevron-left", "\f053", "Fallfor-Icons");
+@include icon("fallfor-plus", "\f067", "Fallfor-Icons");
+@include icon("fallfor-minus", "\f068", "Fallfor-Icons");
+@include icon("fallfor-shopping-cart", "\f07a", "Fallfor-Icons");
+@include icon("fallfor-angle-left", "\f104", "Fallfor-Icons");
+@include icon("fallfor-angle-right", "\f105", "Fallfor-Icons");
+@include icon("fallfor-recycle", "\f1b8", "Fallfor-Icons");
+@include icon("fallfor-smile-o", "\f118", "Fallfor-Icons");
+@include icon("fallfor-truck", "\f0d1", "Fallfor-Icons");
+@include icon("fallfor-phone", "\f095", "Fallfor-Icons");
+@include icon("fallfor-user", "\f007", "Fallfor-Icons");
+
+@import "welcomeOverlay";
+@import "list";
+@import "details";
+@import "windows";
+@import "menu";
+@import "icon";
+@import "category";
+.x-button .x-button-icon:before {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.list {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+.list .disc {
+    ul li{
+        list-style-type: disc;
+    }
+}
+.list .decimal {
+    ul li {
+        list-style-type: decimal;
+    }
+}
+.truck:before {
+    font-family:'Fallfor-Icons';
+    content: "\f0d1";
+    padding-right: 4px;
+}
+.smile:before {
+    font-family:'Fallfor-Icons';
+    content: "\f118";
+    padding-right: 2px;
+}
+.phone:before {
+    font-family:'Fallfor-Icons';
+    content: "\f095";
+    padding-right: 4px;
+}
+.return:before {
+    font-family:'Fallfor-Icons';
+    content: "\f1b8"; 
+    padding-right: 4px; 
+}
+
+.x-list-cartlist.x-list .x-list-item.x-list-item-tpl .x-innerhtml
+{
+    padding-top:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+}
+.star:before {
+    font-family:'Fallfor-Icons';
+    content: "\f005";
+    font-size: 14px;
+    color:#D5D5D5;
+    
+}
+.email:before {
+    font-family:'Fallfor-Icons';
+    content: "\f003";
+    font-size: 14px;
+    color: white;
+    text-align:center;
+}
+
+.tags:before {
+    font-family:'Fallfor-Icons';
+    content: "\f02c";
+    font-size: 14px;
+    color:#D5D5D5;
+    
+}
+.back:before{
+    font-family:'Fallfor-Icons';
+    content: "\f104";
+    font-size: 18px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 16px;
+}
+.cart-product{
+    min-height:95px;
+    border: 2px solid #D5D5D5;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+}
+.cart-total{
+    min-height: 28px;
+    font-size: 15px;
+    font-weight: 50px;
+}
+.cart-product .img{
+    float:left;
+    padding:5px;
+    
+}
+.cart-product .img img{
+   height:95px;
+}
+.cart-product .title{
+    font-size:14px; 
+    }
+.cart-product .mid{
+    width: 58%;
+    float:left;
+    margin-top: 0px;
+    padding-left: 5px;
+}
+.cart-product .empty-text{
+    text-align: center;
+    
+}
+.selector{
+    font-size: 14px;
+    width: 50;
+    height: 10;
+}
+.cart-product .price{
+    font-size:14px;
+    color:#7BC673;
+}
+.cart-product .color_size {
+    font-size:14px;   
+    padding-bottom: 1px;
+    padding-left: 101px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.cart-product .cancel:before{
+    float: right;
+    margin-top:5px;
+    padding-right: 15px;
+    font-family:'Pictos';
+    content: "*";
+    font-size: 16px;
+    color: #D5D5D5;
+
+}
+
+.cart-total .left {
+  float: left;
+  text-align: left;
+  display: inline;
+}
+
+.cart-total .right {
+  float: right;
+  text-align: left;
+  display: inline;
+}
+
+.cart-product .remove-btn{
+    float: right;
+    
+}
+.shipping_info {
+    min-height: 30px;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1.5px solid #D5D5D5;
+    font-weight: normal !important;
+}
+.shipping_info .left {
+  font-weight: normal;
+  float: left;
+  text-align: left;
+  display: inline;
+  margin-left: 0px;
+}
+
+.shipping_info .right {
+  float: right;
+  font-weight:  normal;
+  text-align: left;
+  display: inline;
+  margin-right: 7px;
+}
+.x-button{
+    &.x-button-normal{
+        border:none;
+    }
+}
+.x-button-icon{
+    &.arrow_left{
+        border:none;
+    }
+    
+}
+
+
+.cart-product .remove-btn-label{
+    font-size: 12px;
+}
+
+.address {
+    font-size: 15px;
+    width: 150px;
+    height:60px;
+}
+
+.x-button.x-button-my-confirm{
+    margin-left:auto;
+    margin-right:auto;
+    font-size:24px;
+    background-color:#7bc673;
+    color:white;
+    border:none;   
+}
+
+.x-button.x-button-my-confirm.x-button-pressing{
+    background-color:#9BE693;
+}
+
+.x-button.x-button-my-info{
+    margin-left:auto;
+    margin-right:auto;
+    font-size:24px;
+    background-color:#89C4F4;
+    color:white;
+    border:none;
+}
+
+.x-button.x-button-my-info.x-button-pressing{
+     background-color:#A3DEFE;
+}
+
+.x-tabbar{
+    &.x-tabbar-my-login-tab{
+        border: none;
+        text-align:center;
+        .x-inner{
+            margin-left:2%;
+        }
+    }
+    .x-tab{
+        &.x-tab-normal{
+            background: none repeat scroll 0 0 #BDC3C7; 
+            color:white;
+            border:none;
+            border-radius: 0px;
+            min-width:45%;
+            margin:5px;
+            &.x-tab-active{
+                background-color: #8B9093; 
+  
+            }
+
+        }
+
+    }
+
+}

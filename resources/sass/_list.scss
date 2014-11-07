@@ -1,0 +1,94 @@
+.x-toolbar {
+	background-color: #f7f7f7;
+
+	.x-dock .x-button .x-button-icon {
+		@include st-box-flex(0);
+		height: 1.7em;
+	}
+
+	.x-button .x-button-icon:before {
+		line-height: 1.5em;
+	}
+	.x-title{
+		text-align: center;
+		font-weight: 100;
+	}
+
+
+	.x-field-textarea,
+	.x-field-text,
+	.x-field-number,
+	.x-field-search {
+		.x-component-outer {
+				@include box-shadow($toolbar-input-border-color 0 .1em 0 inset, $toolbar-input-border-color 0 -.1em 0 inset, $toolbar-input-border-color .1em 0 0 inset, $toolbar-input-border-color -.1em 0 0 inset, rgba(#000, .25) 0 .15em .4em inset);
+		}
+	}
+}
+
+.back:before{
+	    font-family:'Fallfor-Icons';
+	    content: "\f104";
+	    font-size: 18px;
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+}
+.product .img {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.grid .x-list-item {
+	display: inline-block;
+	width: auto;
+	border: none !important;
+	@include perspective(300px);
+
+	body.x-ios &.x-item-pressed {
+		.product {
+			@include transform(translateZ(20px));
+		}
+	}
+    .x-innerhtml{
+       padding: 2px !important;
+    }
+
+	.product {
+		@include st-box;
+		@include st-box-orient(vertical);
+		@include st-box-align(center);
+		@include transition-duration(.3s);
+
+		$width: (220) - ($list-item-padding *2);
+		$height: $width;
+
+		.img {
+			background-color: black;
+			background-position: 50%;
+			background-size: cover;
+
+		}
+
+		.info {
+				font-size: 14px;
+				font-weight: 400;
+				text-align: left;
+				padding-bottom: 5px;
+				width:100%;
+		}
+		.original_price{
+		        margin-left:5px;
+		        color:gray;
+		        text-decoration: line-through;
+		}
+		.title{
+				padding: 3px;
+				padding-left:0px;
+				font-size: 14px;;
+				width:100%;
+				font-weight: 300;
+				overflow: hidden;
+				text-align: left;
+				text-overflow: ellipsis;
+		}
+	}
+}
